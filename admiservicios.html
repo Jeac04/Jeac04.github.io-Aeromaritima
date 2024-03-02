@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Servicios</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AdminLTE CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0/css/adminlte.min.css" rel="stylesheet">
+</head>
+<header style="background-color: black; font-family: 'Your Fancy Font', sans-serif;">
+    <div class="px-3 py-2 text-white border-bottom">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+                </a>
+                <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                    <li>
+                        <a href="inicio.html" class="nav-link text-white">
+                            <svg class="bi d-block mx-auto mb-1" width="24" height="24" fill="active"><use xlink:href="#home"/></svg>
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="adminusers.html" class="nav-link text-white">
+                            <svg class="bi d-block mx-auto mb-1" width="24" height="24" fill="currentColor"><use xlink:href="#speedometer2"/></svg>
+                            Usuarios
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admiservicios.html" class="nav-link text-white">
+                            <svg class="bi d-block mx-auto mb-1" width="24" height="24" fill="currentColor"><use xlink:href="#table"/></svg>
+                            Servicios
+                        </a>
+                    </li>
+                    <li>
+                        <a href="altaservicios.html" class="nav-link text-white">
+                            <svg class="bi d-block mx-auto mb-1" width="24" height="24" fill="currentColor"><use xlink:href="#grid"/></svg>
+                            Alta Servicios
+                        </a>
+                    </li>
+                    <li>
+                        <a href="altausuarios.html" class="nav-link text-white">
+                            <svg class="bi d-block mx-auto mb-1" width="24" height="24" fill="currentColor"><use xlink:href="#grid"/></svg>
+                            Alta Usuarios
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reporte.html" class="nav-link text-white">
+                            <svg class="bi d-block mx-auto mb-1" width="24" height="24" fill="currentColor"><use xlink:href="#people-circle"/></svg>
+                            Reportes
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="px-3 py-2 border-bottom mb-3" style="background-color: black;">
+        <div class="container d-flex flex-wrap justify-content-center">
+            <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
+                <input type="search" class="form-control" placeholder="Search..." aria-label="Search" style="background-color: #333; color: white;">
+            </form>
+
+            <div class="text-end">
+                <a href="login.html" class="btn btn-light text-dark me-2">Inicio</a>
+                <a href="registro.html" class="btn btn-secondary">Registro</a>
+            </div>
+        </div>
+    </div>
+</header>
+<body class="hold-transition">
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Administración de Servicios</h3>
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-striped projects">
+                    <thead>
+                        <tr>
+                            <th>Nombre del Servicio</th>
+                            <th>Precio por Hora</th>
+                            <th>Descripción</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Aquí puedes agregar filas dinámicamente con los servicios -->
+                        <!-- Ejemplo de una fila -->
+                        <tr>
+                            <td>Alquiler de Montacargas</td>
+                            <td>$551.21</td>
+                            <td>Alquiler de Montacargas para movimientos de Genset en patio</td>
+                            <td>
+                                <a href="#" class="btn btn-info btn-sm">Editar</a>
+                                <a href="#" class="btn btn-danger btn-sm">Eliminar</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Chofer de Montacargas</td>
+                            <td>$77.85</td>
+                            <td>Servicios Integrados de Chofer de Montacargas</td>
+                            <td>
+                                <a href="#" class="btn btn-info btn-sm">Editar</a>
+                                <a href="#" class="btn btn-danger btn-sm">Eliminar</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Limpieza de Gruas</td>
+                            <td>$100.80</td>
+                            <td>Servicios Integrados para Personal Adicional por Hora</td>
+                            <td>
+                                <a href="#" class="btn btn-info btn-sm">Editar</a>
+                                <a href="#" class="btn btn-danger btn-sm">Eliminar</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Limpieza de Gruas en Periodo Extraordinario</td>
+                            <td>$166.32</td>
+                            <td>Servicios Integrados para Personal de Limpieza en Dias Festivos o Servicio Extraordinario</td>
+                            <td>
+                                <a href="#" class="btn btn-info btn-sm">Editar</a>
+                                <a href="#" class="btn btn-danger btn-sm">Eliminar</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Monitoreo de Contenedores</td>
+                            <td>$93.12</td>
+                            <td>Servicios Integrados para Personal Adicional de Monitoreo de Contenedores</td>
+                            <td>
+                                <a href="#" class="btn btn-info btn-sm">Editar</a>
+                                <a href="#" class="btn btn-danger btn-sm">Eliminar</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Alquiler de Reach Stacker</td>
+                            <td>$1631.64</td>
+                            <td>Alquiler de reach Stacker Para Apoyo en Grua</td>
+                            <td>
+                                <a href="#" class="btn btn-info btn-sm">Editar</a>
+                                <a href="#" class="btn btn-danger btn-sm">Eliminar</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Chofer de Reach Stacker</td>
+                            <td>$139.90</td>
+                            <td>Servicios Integrados de Chofer de reach Stacker</td>
+                            <td>
+                                <a href="#" class="btn btn-info btn-sm">Editar</a>
+                                <a href="#" class="btn btn-danger btn-sm">Eliminar</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
+            <div class="card-footer">
+                <a href="altaservicios.html" class="btn btn-primary float-right">Agregar Servicio</a>
+            </div>
+        </div>
+        <!-- /.card -->
+    </div>
+</body>
+</html>

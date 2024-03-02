@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AdminLTE CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0/css/adminlte.min.css" rel="stylesheet">
+</head>
+<body class="hold-transition">
+    <header style="background-color: black; font-family: 'Your Fancy Font', sans-serif;">
+        <div class="px-3 py-2 text-white border-bottom">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+                    </a>
+                    <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                        <li>
+                            <a href="inicio.html" class="nav-link text-white">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24" fill="active"><use xlink:href="#home"/></svg>
+                                Inicio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="adminusers.html" class="nav-link text-white">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24" fill="currentColor"><use xlink:href="#speedometer2"/></svg>
+                                Usuarios
+                            </a>
+                        </li>
+                        <li>
+                            <a href="admiservicios.html" class="nav-link text-white">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24" fill="currentColor"><use xlink:href="#table"/></svg>
+                                Servicios
+                            </a>
+                        </li>
+                        <li>
+                            <a href="altaservicios.html" class="nav-link text-white">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24" fill="currentColor"><use xlink:href="#grid"/></svg>
+                                Alta Servicios
+                            </a>
+                        </li>
+                        <li>
+                            <a href="altausuarios.html" class="nav-link text-white">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24" fill="currentColor"><use xlink:href="#grid"/></svg>
+                                Alta Usuarios
+                            </a>
+                        </li>
+                        <li>
+                            <a href="reporte.html" class="nav-link text-white">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24" fill="currentColor"><use xlink:href="#people-circle"/></svg>
+                                Reportes
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="px-3 py-2 border-bottom mb-3" style="background-color: black;">
+            <div class="container d-flex flex-wrap justify-content-center">
+                <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
+                    <input type="search" class="form-control" placeholder="Search..." aria-label="Search" style="background-color: #333; color: white;">
+                </form>
+    
+                <div class="text-end">
+                    <a href="login.html" class="btn btn-light text-dark me-2">Inicio</a>
+                    <a href="registro.html" class="btn btn-secondary">Registro</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container mt-5">
+        <div class="dropdown text-center mb-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Seleccionar Reporte
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#" id="dailyReport">Diario</a>
+                <a class="dropdown-item" href="#" id="weeklyReport">Semanal</a>
+                <a class="dropdown-item" href="#" id="monthlyReport">Mensual</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h1 class="card-title text-center" id="reportTitle" style="font-size: 36px;">Reporte Diario</h1>
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-striped projects" id="reportTable">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Servicio</th>
+                            <th>Hora de Inicio</th>
+                            <th>Hora de Fin</th>
+                            <th>Horas Trabajadas</th>
+                            <th>Quién Solicitó el Servicio</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reportBody">
+                        <tr>
+                            <td>2024-02-28</td>
+                            <td>Limpieza de Gruas</td>
+                            <td>08:00 am</td>
+                            <td>12:00 pm</td>
+                            <td>4</td>
+                            <td>Luis Lopez</td>
+                        </tr>
+                        <tr>
+                            <td>2024-02-28</td>
+                            <td>Limpieza de Gruas</td>
+                            <td>12:00 pm</td>
+                            <td>04:00 pm</td>
+                            <td>4</td>
+                            <td>Luis Lopez</td>
+                        </tr>   
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#dailyReport").click(function(){
+                $("#reportTitle").text("Reporte Diario");
+                $("#reportBody").html(`
+                <tr>
+                            <td>2024-02-28</td>
+                            <td>Limpieza de Gruas</td>
+                            <td>08:00 am</td>
+                            <td>12:00 pm</td>
+                            <td>4</td>
+                            <td>Luis Lopez</td>
+                        </tr>
+                        <tr>
+                            <td>2024-02-28</td>
+                            <td>Limpieza de Gruas</td>
+                            <td>12:00 pm</td>
+                            <td>04:00 pm</td>
+                            <td>4</td>
+                            <td>Luis Lopez</td>
+                        </tr>   
+                `);
+            });
+            $("#weeklyReport").click(function(){
+                $("#reportTitle").text("Reporte Semanal");
+                $("#reportBody").html(`
+                <tr>
+                            <td>2024-02-28</td>
+                            <td>Limpieza de Gruas</td>
+                            <td>08:00 am</td>
+                            <td>12:00 pm</td>
+                            <td>4</td>
+                            <td>Luis Lopez</td>
+                        </tr>
+                        <tr>
+                            <td>2024-02-28</td>
+                            <td>Limpieza de Gruas</td>
+                            <td>12:00 pm</td>
+                            <td>04:00 pm</td>
+                            <td>4</td>
+                            <td>Luis Lopez</td>
+                        </tr>  
+                        <tr>
+                            <td>2024-02-29</td>
+                            <td>Alquiler de Montacargas</td>
+                            <td>08:00 am</td>
+                            <td>12:00 pm</td>
+                            <td>4</td>
+                            <td>Pablo Garay</td>
+                        </tr>
+                        <tr>
+                            <td>2024-03-01</td>
+                            <td>Alquiler de Reach Stacker</td>
+                            <td>12:00 pm</td>
+                            <td>04:00 pm</td>
+                            <td>4</td>
+                            <td>Victoria Vazquez</td>
+                        </tr>    
+                `);
+            });
+            $("#monthlyReport").click(function(){
+                $("#reportTitle").text("Reporte Mensual");
+                $("#reportBody").html(`
+                <tr>
+                            <td>2024-02-28</td>
+                            <td>Limpieza de Gruas</td>
+                            <td>08:00 am</td>
+                            <td>12:00 pm</td>
+                            <td>4</td>
+                            <td>Luis Lopez</td>
+                        </tr>
+                        <tr>
+                            <td>2024-02-28</td>
+                            <td>Limpieza de Gruas</td>
+                            <td>12:00 pm</td>
+                            <td>04:00 pm</td>
+                            <td>4</td>
+                            <td>Luis Lopez</td>
+                        </tr>  
+                        <tr>
+                            <td>2024-02-29</td>
+                            <td>Alquiler de Montacargas</td>
+                            <td>08:00 am</td>
+                            <td>12:00 pm</td>
+                            <td>4</td>
+                            <td>Pablo Garay</td>
+                        </tr>
+                        <tr>
+                            <td>2024-03-01</td>
+                            <td>Alquiler de Reach Stacker</td>
+                            <td>12:00 pm</td>
+                            <td>04:00 pm</td>
+                            <td>4</td>
+                            <td>Victoria Vazquez</td>
+                        </tr> 
+                        <tr>
+                            <td>2024-03-02</td>
+                            <td>Limpieza de Gruas</td>
+                            <td>08:00 am</td>
+                            <td>12:00 pm</td>
+                            <td>4</td>
+                            <td>Luis Lopez</td>
+                        </tr>
+                        <tr>
+                            <td>2024-03-04</td>
+                            <td>Limpieza de Gruas</td>
+                            <td>12:00 pm</td>
+                            <td>04:00 pm</td>
+                            <td>4</td>
+                            <td>Luis Lopez</td>
+                        </tr>  
+                        <tr>
+                            <td>2024-03-17</td>
+                            <td>Alquiler de Montacargas</td>
+                            <td>08:00 am</td>
+                            <td>12:00 pm</td>
+                            <td>4</td>
+                            <td>Pablo Garay</td>
+                        </tr>
+                        <tr>
+                            <td>2024-03-28</td>
+                            <td>Alquiler de Reach Stacker</td>
+                            <td>12:00 pm</td>
+                            <td>04:00 pm</td>
+                            <td>4</td>
+                            <td>Victoria Vazquez</td>
+                        </tr> 
+                `);
+            });
+        });
+    </script>
+</body>
+</html>
